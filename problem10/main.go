@@ -1,8 +1,9 @@
 package main
 
 import (
-	"ProjectEuler/common"
 	"fmt"
+
+	"github.com/lwlach/GoEulerProject/common"
 )
 
 func main() {
