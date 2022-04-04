@@ -58,6 +58,10 @@ func readGrid() [][]int {
 	var grid [][]int
 	for {
 		line, err := reader.ReadString('\n')
+		if err != nil {
+			// EOF
+			break
+		}
 		line = strings.Trim(line, "\n")
 		numbersStr := strings.Split(line, " ")
 		var arr []int
@@ -66,10 +70,6 @@ func readGrid() [][]int {
 			arr = append(arr, n)
 		}
 		grid = append(grid, arr)
-		if err != nil {
-			// EOF
-			break
-		}
 	}
 	return grid
 }
