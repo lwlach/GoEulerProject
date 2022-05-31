@@ -20,7 +20,6 @@ func main() {
 	fmt.Println(time.Now())
 }
 
-// 225ms
 func findMex(arr []int) int {
 	notMex := make(map[int]bool)
 	for _, n := range arr {
@@ -36,7 +35,7 @@ func findMex(arr []int) int {
 	return mex
 }
 
-// 75ms
+// faster
 func findMex2(arr []int) int {
 	sort.Ints(arr)
 	for i, n := range arr {
